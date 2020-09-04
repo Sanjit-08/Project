@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --yellow: #ffc600;
+    --black: #272727;
+  }
+  
+         html {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        margin: 0;
+  padding: 0;
+    }
+  body{
+      /* display:grid; */
+      background-image: url("./images/main_bg.jpg");
+      /* background-attachment: fixed;
+      background-position:center ; */
+      background-repeat: no-repeat;
+      background-size: 100%;
+      /* background-size:1024px 1500px; */
+      box-sizing: border-box;
+      /* overflow: scroll; */
+      overflow-x:hidden;
+      margin:0px;
+      padding:0;
+  }
+  
+  .item{
+      display: grid;
+      grid-gap:10px;
+      justify-items: center;
+      align-items: center;
+      font-size:15px;
+      color:#787878;
+      text-shadow: 0 0 0.5px #000;
+      cursor: pointer;
+  }
+  .contain{
+      display: grid;
+      /* justify-content:center;
+      align-items:center; */
+      place-items:center center;
+      justify-content: center ;
+      background:url("./images/header_bg01.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      grid-template-columns: 162px 1fr repeat(4,0.6fr) 245px;
+      grid-template-rows: 100px;
+  }
+  .container{
+      margin:0;
+      padding:0;
+      /* border:4px solid transparent;
+      border-image:url('./images/header_bg.png') 8 stretch; */
+      position: relative;
+      top:0px;
+      left:180px;
+  }
+  /* .head{
+      position: relative;
+      top:0px;
+      left:140px;
+  
+  } */
+  .carousel{
+      border:2px solid lightgray;
+      border-top:none;
+      /* border-image:url("./images/header_bg.png"); */
+      width:100%;
+  }
+  .tales {
+    width: 100%;
+  }
+  .carousel-item{
+      width:100%;
+      height:500px;
+  }
+  .carousel-inner{
+    width:100%;
+    max-height: 400px !important;
+  }
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+  .carousel-indicators{
+      text-align: right;
+      float: right;
+      right: -13% !important;
+      left: inherit;
+  }
+  .carousel-caption{
+      position: absolute;
+      top:60px;
+      color:black;
+      right:-47% !important;
+  }
+  
+  .carousel-caption .carheader1{
+      color:#239B56;
+  }
+  .carousel-caption .cartext p{
+      font-size:20px;
+      color:#787878;
+      text-align: left;
+  }
+  
+  .cartext{
+      position: relative;
+      right:-41.2% !important;
+  }
+  .learnbutton{
+      position: relative;
+      top:50px;
+      right:-41.2% !important;
+
+  }
+  .learnbutton2{
+      position: relative;
+      top:40px;
+      right:-41.5% !important;
+  }
+  
+  .lbutton{
+      display: flex;
+      text-align:center;
+      width:220px;
+      background:white;
+      border:1px solid #239b56;
+      color:#239B56;
+      font-weight: bold;
+      line-height:1.5;
+      font-size:15px;
+      padding-left:10px;
+      padding-top:10px;
+      padding-bottom:10px;
+      padding-right: 10px;
+  }
+  .lbutton .arrowimage{
+      position: relative;
+      left:100px;
+      vertical-align: middle;
+  }
+  .carousel-caption .carheader2{
+      color:#239B56;
+      position: relative;
+      right:1.8%;
+      top:-5%;
+  }
+   .carheader2 > p{
+      position: absolute;;
+      left:648px;
+  }
+  .carousel-caption .carheader2 > p{
+      position: relative;
+      text-align: left;
+      top:-15% !important;
+      right:-43% !important;
+  }
+  .carousel-caption .cartext2 p{
+      font-size:20px;
+      color:#787878;
+      text-align: left;
+  }
+  .cartext2{
+      position: relative;
+      right:-41.5% !important;
+      line-height:10px;
+  }
+  
+  .lifestyle{
+      display: grid;
+      width:1138px;
+      height:600px;
+      background:url("./images/lifestyle_box_bg.jpg");
+      background-size:contain;
+      border:1px solid lightgray;
+      grid-template-columns: 420px repeat(3,1fr) 147px;
+      grid-template-rows:100px 500px; 
+      grid-auto-flow:row;
+      grid-template-areas:
+      "heading heading heading heading heading "
+      "content photo1 photo2 photo3 photo4";
+  }
+  .connected{
+      grid-area:heading;
+  }
+  .content{
+      grid-area:content;
+  }
+  .photo1{
+      grid-area:photo1;
+  }
+  .photo2{
+      grid-area:photo2;
+  }
+  .photo3{
+      grid-area:photo3;
+  }
+  .photo4{
+      grid-area:photo4;
+  }
+  
+  .box{
+     display: grid;
+    justify-content: start;
+    align-items: center;
+    /* border: 5px solid rgba(0, 0, 0, 0.03);
+    border-radius: 3px; */
+    font-size: 35px;
+    /* background-color: var(--yellow); */
+    padding-left:20px;
+    padding-top:20px;
+  
+  }
+  .box h3{
+      color:#239B56;
+      justify-content:start;
+      font-weight: bold;
+  }
+  .connected h3{
+      padding-top: 20px;
+      padding-left:6px;
+      position: relative;
+  }
+  .connected .underline{
+      position: relative;
+      bottom:45px;
+      color:#239B56;
+      padding-left:8px;
+  }
+  .content{
+      text-align:left;
+      font-size:16px;
+      color:#787878;
+      text-shadow:0 5px solid #787878;
+      border-right: 4px solid;
+      border-image: url("./images/lifestyle_box_bg.jpg");
+  }
+  .customer{
+      display:grid;
+      grid-gap:3px;
+      row-gap:15px;
+      width:780px;
+      height:600px;
+      place-items:center center;
+      /* background:red; */
+      grid-template-columns:repeat(2,230px) 250px;
+      grid-template-rows:30px 150px repeat(2,150px);
+      grid-template-areas:
+      "chead chead chead"
+      "ctext ctext ctext"
+      "img1 img2 img3"
+      "img4 img5 img6";
+  
+  }
+  .cbox{
+     display: grid;
+    /* justify-content: center; */
+    align-items: center;
+    justify-items:center;
+    /* border: 5px solid rgba(0, 0, 0, 0.03); */
+    /* border-radius: 3px; */
+    font-size: 35px;
+    /* background-color: var(--yellow); */
+    margin-left:-15px;
+    padding-top:20px;
+  
+  }
+  .chead{
+      grid-area:chead;
+      justify-self: start;
+  }
+  .ctext{
+      grid-area:ctext;
+      justify-self: start;
+      word-spacing: 1.6px;
+      font-size:15px;
+      margin-left:0px;
+      position: relative;
+      top:-28px;
+  }
+  .img1{
+      grid-area:img1;
+      position: relative;
+      justify-self: start;
+      top:-50px;
+      /* justify-items:start;
+      align-items:flex-start; */
+  }
+  .img2{
+      grid-area:img2;
+      justify-self: start;
+      position: relative;
+      top:-50px;
+  }
+  .img3{
+      grid-area:img3;
+      justify-self: start;
+      position: relative;
+      top:-50px;
+  }
+  .img4{
+      grid-area:img4;
+      position: relative;
+      top:-60px;
+      justify-self: start;
+  }
+  .img5{
+      grid-area:img5;
+      position: relative;
+      top:-60px;
+      justify-self: start;
+  }
+  .img6{
+      grid-area:img6;
+      position: relative;
+      top:-60px;
+      justify-self: start;
+  }
+  .cbox h3{
+      color:#239B56;
+      /* font-weight: bold; */
+      margin-left:-457px;
+      position: relative;
+  }
+  .cbox .underline-c{
+      position: relative;
+      bottom:45px;
+      color:#239B56;
+      padding-left:14px;
+  }
+  .news{
+      display:grid;
+      grid-gap:10px;
+      row-gap:2px;
+      width:350px;
+      height:600px;
+      place-items:center center;
+      /* background:blueviolet; */
+      grid-template-columns:400px;
+      grid-template-rows: 30px 200px 200px;
+      grid-template-areas:
+      "nhead"
+      "news1"
+      "news2";
+  }
+  .nbox{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items:center;
+    /* border: 5px solid rgba(0, 0, 0, 0.03); 
+    border-radius: 3px; */
+    font-size: 35px;
+    /* background-color:var(--yellow); */
+    margin-left:-15px;
+    padding-top:30px;
+  
+  }
+  
+  .nhead{
+      grid-area:nhead;
+      justify-self: start;
+  }
+  .news1{
+      grid-area:news1;
+      justify-self: start;
+  }
+  .news2{
+      grid-area:news2;
+  }
+  .nhead h3{
+     color:mediumseagreen;
+     margin-left:-138px;
+     position: relative;
+  }
+  .nhead .underline-n{
+      position: relative;
+      bottom:45px;
+      color:mediumseagreen;
+      padding-left:25px;
+  }
+  
+  .media{
+      display:grid;
+      grid-gap:145px;
+      row-gap:15px;
+      width:1145px;
+      height:600px;
+      place-items:stretch stretch;
+      padding-left:55px;
+      padding-top:25px;
+      background:url("./images/lifestyle_box_bg.jpg");
+      border:1px solid lightgray;
+      background-size: contain;
+      /* background:violet; */
+      grid-template-columns:500px 500px;
+      grid-template-rows:70px 350px 100px;
+      grid-template-areas:
+      "mediaphoto mediavideo"
+      "pics vids"
+      "picscontent vidcontent";
+  }
+  .mbox{
+     display: grid;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid rgba(0, 0, 0, 0.03);
+    border-radius: 3px; */
+    font-size: 35px;
+    /* background-color: var(--yellow); */
+    padding-left:0px;
+    margin-left:-10px;
+    padding-top:5px;
+  
+  }
+  .mediaphoto{
+      grid-area:mediaphoto;
+      justify-self: start;
+      margin-left:-15px;
+  }
+  .mediavideo{
+      grid-area:mediavideo;
+      justify-self: start;
+      margin-left:20px;
+  }
+  .mediavideo > h3{
+      color:seagreen;
+      margin-left:-63px;
+  }
+  .pics{
+      grid-area:pics;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-left:-32px;
+      padding-left:0px;
+      padding-right:0px;
+      padding-top:0px;
+      margin-top:-15px;
+      margin-right:-5px;
+  }
+  .pics > div > a {
+   margin:6.8px;
+   margin-top:-20px;
+   /* font-size:30px; */
+  }
+  .vids{
+      grid-area:vids;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-left:-53px;
+      padding-left:0px;
+      padding-top:0px;
+      margin-top:-15px;
+      margin-bottom:14px;
+  }
+  .vids > div > a{
+      margin:2px;
+  }
+  .piccontent{
+      grid-area:picscontent;
+      justify-self: start;
+      margin-left:-10px;
+      margin-top:-20px;
+      padding-right:15px;
+      margin-right:2px;
+  }
+  .piccontent > p{
+      word-spacing: 2px;
+  }
+  .vidcontent{
+      grid-area:vidcontent;
+      justify-self: start;
+      margin-left:-42px;
+      margin-top:-20px;
+      padding-right:48px;
+      margin-right:10px;
+      word-spacing: 2px;
+  }
+  .mediaphoto > h3{
+      color:seagreen;
+      position: relative;
+  }
+  .underline-m{
+      position: relative;
+      bottom:45px;
+      color:seagreen;
+      padding-left:2px;
+  }
+  .underline-mv{
+      position: relative;
+      bottom:45px;
+      color:seagreen;
+      padding-left:0px;
+      margin-left:-60px;
+  }
+  
+  .pics > div{
+      cursor: pointer;
+  }
+  .pics > div >img:hover{
+      background-color:#ddd;
+  }
+  .vids > div{
+      cursor: pointer;
+  }
+  .vids > div > img:hover{
+      background-color:#ddd;
+  }
+  
+  .footer{
+      position: relative;
+      left:0;
+      top:1300px;
+      width:100%;
+      height:100px;
+      color:whitesmoke;
+      background-color:#767474;
+  }
+  .footerelements{
+      display: flex;
+      position: relative;
+      left:165px;
+      justify-content: flex-start;
+      
+  }
+  .footerelements > div{
+      font-size:15px;
+      color:whitesmoke;
+      margin:16px;
+      cursor: pointer;
+  }
+  .footerelements .foot6{
+      font-size:12px;
+      color:white;
+      float:right;
+      position: absolute;
+      right:350px;
+      top:5px;
+      cursor: auto;
+  }
+  .footerelements .foot6 > img{
+      position: absolute;
+      top:3.9px;
+      right:218px;
+  }
+
+  .modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top:100px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top:50%;
+    background-color:white;
+    z-index:-1;
+    margin: auto;
+    padding: 0;
+    width:650px;
+    height:435px;
+    padding:1px 10px 2px 10px;
+  }
+  .mySlides > p{
+      color:#00CC66;
+      font-weight:bold;
+      padding-top:4px;
+  }
+  /* The Close Button */
+  .close {
+    float:right;
+    position: relative;
+    right:440px;
+    top:-19px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    font-size: 20px;
+    transition: 0.6s ease;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .prev{
+      margin-left:-100px;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: -90px;
+    
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+  .videomodal {
+    position: fixed;  
+    display: none;
+    z-index:999;
+    padding-top:100px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow:auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  /* Modal Content */
+  .videomodal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top:50%;
+    background-color:white;
+    z-index:-1;
+    margin: auto;
+    padding: 0;
+    width:650px;
+    height:435px;
+    padding:1px 10px 2px 10px;
+  }
+
+   
+  .myvideoslides{
+    display: none;
+}
+  .myvideoslides > p{
+      color:#00CC66;
+      font-weight:bold;
+      padding-top:4px;
+  }
+
+ 
+  
+  
+  
